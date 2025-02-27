@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Signup</title>
+  <link rel="stylesheet" href="input.css"> 
+</head>
+<body class="bg-blue-900 flex items-center justify-center h-screen">
+  <div class="w-full max-w-md bg-white rounded-lg shadow-lg border-2 border-yellow-500">
+    <!-- Tabs -->
+    <div class="flex border-b">
+      <button
+        class="w-1/2 py-2 text-center text-lg font-semibold text-white bg-blue-800 rounded-lg"
+        id="login-tab"
+      >
+        Login
+      </button>
+      <button
+        class="w-1/2 py-2 text-center text-lg font-semibold text-gray-600"
+        id="signup-tab"
+      >
+        Signup
+      </button>
+    </div>
+    
+    <!-- Forms -->
+    <div class="p-6">
+      <!-- Login Form -->
+      <form id="login-form" class="space-y-4">
+        <input
+          type="email"
+          placeholder="Email Address"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          required
+        />
+        <div class="flex items-center justify-between">
+          <a href="#" class="text-sm text-blue-500 hover:underline">Forgot password?</a>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
+        >
+          Login
+        </button>
+      </form>
+
+      <!-- Signup Form -->
+      <form id="signup-form" class="space-y-4 hidden">
+        <input
+          type="email"
+          placeholder="Email Address"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          required
+        />
+        <button
+          type="submit"
+          class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
+        >
+          Signup
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for Tab Functionality
+    const loginTab = document.getElementById("login-tab");
+    const signupTab = document.getElementById("signup-tab");
+    const loginForm = document.getElementById("login-form");
+    const signupForm = document.getElementById("signup-form");
+
+    loginTab.addEventListener("click", () => {
+      loginTab.classList.add("text-white", "bg-blue-800","rounded-lg");
+      signupTab.classList.remove("text-white", "bg-blue-800","rounded-lg");
+      loginForm.classList.remove("hidden");
+      signupForm.classList.add("hidden");
+    });
+
+    signupTab.addEventListener("click", () => {
+      signupTab.classList.add("text-white", "bg-blue-800","rounded-lg");
+      loginTab.classList.remove("text-white", "bg-blue-800","rounded-lg");
+      signupForm.classList.remove("hidden");
+      loginForm.classList.add("hidden");
+    });
+  </script>
+</body>
+</html>

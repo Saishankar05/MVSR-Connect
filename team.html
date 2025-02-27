@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="input.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        div{
+          overflow: -moz-scrollbars-none; 
+          -ms-overflow-style: none; 
+          scrollbar-width: none; 
+        }
+        div::-webkit-scrollbar {
+          display: none;
+        }
+      </style>
 </head>
-<body class="bg-blue-950 scrollbar-none">
+<body class="bg-blue-900 scrollbar-none">
+    <nav class="bg-blue-950 w-full h-auto px-3 py-3 flex justify-between items-center">
+        <h1 class="text-xl sm:text-yellow-500 sm:font-bold md:text-xl md:font-bold md:text-yellow-500 lg:text-2xl lg:text-yellow-500 lg:font-bold">MVSR Connect</h1>
+        <div class="flex gap-1">
+            <a href="#" class="bg-yellow-500 sm:py-1 sm:px-2 sm:font-bold sm:rounded-sm md:rounded-sm md:px-3 md:py-2 md:font-bold lg:rounded-sm lg:py-2 lg:px-6 lg:font-bold">Projects</a>
+            <a href="#" class="bg-yellow-500 sm:py-1 sm:px-2 sm:font-bold sm:rounded-sm md:rounded-sm md:px-3 md:py-2 md:font-bold lg:rounded-sm lg:py-2 lg:px-6 lg:font-bold">245121737162</a>
+        </div>
+    </nav>
     <div class="flex  flex-wrap p-4 my-4">
         <div class=" w-full lg:w-3/4">
             <div class="w-full">
@@ -74,7 +91,7 @@
                 </div>
             </div> 
             <div class="w-3/4  bg-gray-600 mx-auto p-4 text-center font-averia text-2xl">
-                <a href="#">Evaluate</a>
+                <a href="eve.html">Evaluate</a>
             </div>
         </div>
     </div>
